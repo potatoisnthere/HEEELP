@@ -159,10 +159,6 @@
               `width: ${(data.progress_ms * 100) / data.item.duration_ms}%`
           );
 
-        document.getElementById(
-          "player-background"
-        ).style.backgroundImage = `url(${data.item.album.images[1].url})`;
-
         // Set the links to spotify stuff
         document
           .getElementById("player-song-link")
