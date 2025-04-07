@@ -80,7 +80,7 @@ input[type="reset"] {
 button:not(:disabled):active,
 input[type="submit"]:not(:disabled):active,
 input[type="reset"]:not(:disabled):active {
-  box-shadow: var(--border-sunken-outer), var(--border-sunken-inner);
+  box-shadow:  inset -1px -1px #ffffff, inset -2px -2px #dfdfdf;
   padding: 2px 11px 0 13px;
 }
 
