@@ -1,106 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The web site of potatoishere</title>
-<style>
-  :root {
-  /* Color */
-  --surface: #c0c0c0;
-  --button-highlight: #ffffff;
-  --button-face: #dfdfdf;
-  --button-shadow: #808080;
-  --window-frame: #0a0a0a;
-  --dialog-blue: #000080;
-  --dialog-blue-light: #1084d0;
-  --dialog-gray: #808080;
-  --dialog-gray-light: #b5b5b5;
-  --link-blue: #0000ff;
-
-  /* Spacing */
-  --element-spacing: 8px;
-  --grouped-button-spacing: 4px;
-  --grouped-element-spacing: 6px;
-  --radio-width: 12px;
-  --checkbox-width: 13px;
-  --radio-label-spacing: 6px;
-  --range-track-height: 4px;
-  --range-spacing: 10px;
-
-  /* Some detailed computations for radio buttons and checkboxes */
-  --radio-total-width-precalc: var(--radio-width) + var(--radio-label-spacing);
-  --radio-total-width: calc(var(--radio-total-width-precalc));
-  --radio-left: calc(-1 * var(--radio-total-width-precalc));
-  --radio-dot-width: 4px;
-  --radio-dot-top: calc(var(--radio-width) / 2 - var(--radio-dot-width) / 2);
-  --radio-dot-left: calc(
-    -1 * (var(--radio-total-width-precalc)) + var(--radio-width) / 2 - var(
-        --radio-dot-width
-      ) / 2
-  );
-
-  --checkbox-total-width-precalc: var(--checkbox-width) +
-    var(--radio-label-spacing);
-  --checkbox-total-width: calc(var(--checkbox-total-width-precalc));
-  --checkbox-left: calc(-1 * var(--checkbox-total-width-precalc));
-  --checkmark-width: 7px;
-  --checkmark-top: 3px;
-  --checkmark-left: 3px;
-
-  /* Borders */
-  --border-width: 1px;
-  --border-raised-outer: inset -1px -1px var(--window-frame),
-    inset 1px 1px var(--button-highlight);
-  --border-raised-inner: inset -2px -2px var(--button-shadow),
-    inset 2px 2px var(--button-face);
-  --border-sunken-outer: inset -1px -1px var(--button-highlight),
-    inset 1px 1px var(--window-frame);
-  --border-sunken-inner: inset -2px -2px var(--button-face),
-    inset 2px 2px var(--button-shadow);
-
-  /* Window borders flip button-face and button-highlight */
-  --border-window-outer: inset -1px -1px var(--window-frame),
-    inset 1px 1px var(--button-face);
-  --border-window-inner: inset -2px -2px var(--button-shadow),
-    inset 2px 2px var(--button-highlight);
-
-  /* Field borders (checkbox, input, etc) flip window-frame and button-shadow */
-  --border-field: inset -1px -1px var(--button-highlight),
-    inset 1px 1px var(--button-shadow), inset -2px -2px var(--button-face),
-    inset 2px 2px var(--window-frame);
-}
-
-
-
-button,
-input[type="submit"],
-input[type="reset"] {
-  box-sizing: border-box;
-  border: none;
-  background: #c0c0c0;
-  box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf;
-  border-radius: 0;
-  padding: 0 12px;
-}
-
-button:not(:disabled):active,
-input[type="submit"]:not(:disabled):active,
-input[type="reset"]:not(:disabled):active {
-  box-shadow: var(--border-sunken-outer), var(--border-sunken-inner);
-  padding: 2px 11px 0 13px;
-}
-
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus {
-  outline: 1px dotted #000000;
-  outline-offset: -4px;
-}
-</style>
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-  </head>
-  <body>
 <table
   id="player"
   style="
@@ -128,36 +25,65 @@ input[type="reset"]:focus {
           style="font-size: 1.3em; margin-bottom: 1em"
         ></div>
         <a
-          id="player-song-link"
-          href=""
-          target="_blank"
-        >
-          <button style="height:58.75px; width:102.93px; font-size: 30px;"> Song </button>
-        </a>
-        <a
-          id="player-artist-link"
-          href=""
-          target="_blank"
-        >
-          <button style="height:58.75px; width:102.93px; font-size: 30px;">Artist</button>
-          </a
-        >
-        <a
-          id="player-album-link"
-          href=""
-          target="_blank"
-        >
-          <button style="height:58.75px; width:102.93px; font-size: 30px;"> Album </button>
-          </a
-        >
-        <a
-          id="player-mp3-link"
-          href=""
-          target="_blank"
-        >
-          <button style="height:58.75px; width:102.93px; font-size: 30px;"> MP3 </button>
-          </a
-        >
+           id="player-song-link"
+           href=""
+           target="_blank"
+           style="
+             color: black;
+             text-decoration: none;
+             border: 1px solid black;
+             border-radius: 10px;
+             padding: 0.2em;
+             margin-right: 0.2em;
+           "
+         >
+            Song
+         </a>
+         <a
+           id="player-artist-link"
+           href=""
+           target="_blank"
+           style="
+             color: black;
+             text-decoration: none;
+             border: 1px solid black;
+             border-radius: 10px;
+             padding: 0.2em;
+             margin-right: 0.2em;
+           "
+         >
+            Artist</a
+         >
+         <a
+           id="player-album-link"
+           href=""
+           target="_blank"
+           style="
+             color: black;
+             text-decoration: none;
+             border: 1px solid black;
+             border-radius: 10px;
+             padding: 0.2em;
+             margin-right: 0.2em;
+           "
+         >
+           Album</a
+         >
+         <a
+           id="player-mp3-link"
+           href=""
+           target="_blank"
+           style="
+             color: black;
+             text-decoration: none;
+             border: 1px solid black;
+             border-radius: 10px;
+             padding: 0.2em;
+             margin-right: 0.2em;
+           "
+         >
+           MP3</a
+         >
         <div id="player-status" style="margin: 2em 0 1em 0"></div>
         <div
           id="player-time"
