@@ -18,7 +18,7 @@
     <td width="20%" align="center">
       <img
         id="player-album-art"
-        style="margin: 1em; max-height: 50vmin; border: 3px inset lightgrey;"
+        style="margin: 1em; max-height: 50vmin; border: 3px inset lightgrey; align:"
       />
     </td>
     <td width="80%">
@@ -190,8 +190,8 @@
         document.getElementById("player-artist").innerHTML =
           data.item.artists[0].name;
         document.getElementById("player-status").innerHTML = data.is_playing
-          ? `▶️ ${spotifyUser}'s now playing...`
-          : `⏸ ${spotifyUser} has paused.`;
+          ? ` ${spotifyUser}'s now playing...`
+          : ` ${spotifyUser} has paused.`;
         document
           .getElementById("player-album-art")
           .setAttribute("src", data.item.album.images[1].url);
