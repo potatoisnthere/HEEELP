@@ -231,18 +231,6 @@
         } else {
           setProgress();
         }
-
-        // Hide all the extra things in mobile (<410px)
-        if (document.getElementById("player").clientWidth < 410) {
-          // Hide links
-          document.getElementById("player-song-link").style.display = "none";
-          document.getElementById("player-artist-link").style.display = "none";
-          document.getElementById("player-album-link").style.display = "none";
-          document.getElementById("player-mp3-link").style.display = "none";
-
-          // Hide duration
-          document.getElementById("player-time").style.display = "none";
-        }
       });
   }
 
